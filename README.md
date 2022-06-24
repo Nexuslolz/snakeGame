@@ -1,2 +1,2 @@
-# snakeGame - deploy page
+# snakeGame
 https://nexuslolz.github.io/snakeGame/
