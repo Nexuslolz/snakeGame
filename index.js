@@ -149,7 +149,7 @@ let x1 = null
 let y1 = null
 
 function handleTouchStart(event) {
-  // body.style.overflow = 'hidden'
+  body.style.overflow = 'hidden'
 
   const touchStart = event.touches[0];
 
@@ -158,7 +158,7 @@ function handleTouchStart(event) {
 }
 
 function handleTouchMove(event) {
-  // body.style.overflow = 'hidden'
+  body.style.overflow = 'hidden'
 
   if (!x1 || !y1) {
     return false
@@ -191,9 +191,9 @@ function handleTouchMove(event) {
   }
 }
 
-// function handleTouchEnd() {
-// body.style.overflow = 'auto'
-// }
+function handleTouchEnd() {
+  body.style.overflow = 'auto'
+}
 
 Snake.prototype.setDirection = function (newDirection) {
   if (this.direction === "up" && newDirection === "down") {
