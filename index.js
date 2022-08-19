@@ -198,22 +198,6 @@ Snake.prototype.setDirection = function (newDirection) {
   this.nextDirection = newDirection;
 };
 
-// Snake.prototype.setMobileDirection = function (newDirection) {
-//   if (this.direction === "up" && newDirection === "down") {
-//     return;
-//   } else if (this.direction === "down" && newDirection === "up") {
-//     return;
-//   } else if (this.direction === "left" && newDirection === "right") {
-//     return;
-//   } else if (this.direction === "right" && newDirection === "left") {
-//     return;
-//   }
-//   this.nextDirection = newDirection;
-//   newDirection = handleTouchMove()
-//   if (newDirection !== undefined) {
-//     snake.setMobileDirection(newDirection);
-//   }
-// }
 ///////apple
 let Apple = function () {
   this.position = new Block(10, 10);
@@ -336,4 +320,3 @@ $("body").keydown(function (event) {
 $(".refresh__btn").click(function () {
   location.reload();
 });
-
