@@ -163,4 +163,13 @@
   .help__list {
     opacity: 0.8;
   }
+
+  .main {
+    width: auto;
+  }
+
+  body {
+    display: flex;
+    justify-content: flex-start;
+  }
 }
