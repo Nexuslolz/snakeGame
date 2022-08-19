@@ -173,3 +173,7 @@
     justify-content: flex-start;
   }
 }
+
+.cnvs {
+  overflow: hidden;
+}
