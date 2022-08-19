@@ -138,21 +138,21 @@
     flex-direction: column;
   }
 
-  .cnvs {
-    order: -1;
-  }
-
   .help {
     position: inherit;
   }
 
   .menu {
     position: absolute;
-    top: 420px;
-    right: 220px;
+    top: 0px;
+    right: 26%;
   }
 
   .colors {
     margin-top: 0;
+  }
+
+  .help__list {
+    opacity: 0.8;
   }
 }
