@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./index.js"></script>
+    <link rel="stylesheet" href="./style.css"></link>
+    <title>Игра "Змейка"!</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="wrapper">
+        <div class="colors" data-title="Выбор цвета змейки">
+          <div class="color-1"></div>
+          <div class="color-2"></div>
+          <div class="color-3"></div>
+          <div class="color-4"></div>
+          <div class="color-5"></div>
+        </div>
+        <canvas class="cnvs" width="380" height="380"></canvas>
+        <div class="menu">
+          <div class="btn__menu-start" data-title="Старт игры">Старт!</div>
+          <div
+            class="btn__menu-pause"
+            data-title="Поставить игру на паузу. Либо на клавиатуре нажми Р"
+          >
+            Пауза
+          </div>
+        </div>
+      </div>
+      <div
+        class="refresh__btn"
+        data-title="Обновить страницу. Также, когда игра закончена, можно нажать на Enter для обновления игры."
+      >
+        Обновить страницу
+      </div>
+      <div class="help">
+        <h3 class="help__header">Справка</h3>
+        <ul class="help__list">
+          <li>
+            Обновить страницу также можно, когда игра закончена, нажав на Enter.
+          </li>
+          <li>Выбор цвета змейки располагается в левой части интерфейса.</li>
+          <li>Старт игры нужно нажать, когда будете готовы играть.</li>
+          <li>
+            Поставить игру на паузу можно по кнопке "Пауза" либо на клавиатуре
+            нажать кнопку Р (англ.)
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
