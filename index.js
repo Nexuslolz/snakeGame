@@ -136,6 +136,55 @@ let refreshers = {
   13: "refresh",
 };
 
+
+
+///// mobile controls
+
+cnvs.addEventListener('touchstart', handleTouchStart, false)
+cnvs.addEventListener('touchmove', handleTouchMove, false)
+
+let x1 = null
+let y1 = null
+
+function handleTouchStart(event) {
+  const touchStart = event.touches[0];
+
+  x1 = touchStart.clientX;
+  y1 = touchStart.clientY;
+}
+
+function handleTouchMove(event) {
+  if (!x1 || !y1) {
+    return false
+  }
+  const touchMove = event.touches[0]
+
+  x2 = touchMove.clientX
+  y2 = touchMove.clientY
+
+  let xDiff = x2 - x1
+  let yDiff = y2 - y1
+
+  let newDirection
+
+  if (Math.abs(xDiff) > Math.abs(yDiff)) {
+    if (x2 > x1) {
+      newDirection = "right"
+    } else {
+      newDirection = "left"
+    }
+  } else {
+    if (y2 > y1) {
+      newDirection = "down"
+    } else {
+      newDirection = "up"
+    }
+  }
+  if (newDirection !== undefined) {
+    snake.setDirection(newDirection);
+  }
+}
+
 Snake.prototype.setDirection = function (newDirection) {
   if (this.direction === "up" && newDirection === "down") {
     return;
@@ -149,6 +198,22 @@ Snake.prototype.setDirection = function (newDirection) {
   this.nextDirection = newDirection;
 };
 
+// Snake.prototype.setMobileDirection = function (newDirection) {
+//   if (this.direction === "up" && newDirection === "down") {
+//     return;
+//   } else if (this.direction === "down" && newDirection === "up") {
+//     return;
+//   } else if (this.direction === "left" && newDirection === "right") {
+//     return;
+//   } else if (this.direction === "right" && newDirection === "left") {
+//     return;
+//   }
+//   this.nextDirection = newDirection;
+//   newDirection = handleTouchMove()
+//   if (newDirection !== undefined) {
+//     snake.setMobileDirection(newDirection);
+//   }
+// }
 ///////apple
 let Apple = function () {
   this.position = new Block(10, 10);
@@ -271,3 +336,4 @@ $("body").keydown(function (event) {
 $(".refresh__btn").click(function () {
   location.reload();
 });
+
