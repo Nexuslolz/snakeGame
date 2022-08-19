@@ -1,0 +1,158 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 760px;
+}
+
+.cnvs {
+  order: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.colors {
+  margin-top: 100px;
+  width: 80px;
+  position: relative;
+}
+
+.color-1,
+.color-2,
+.color-3,
+.color-4,
+.color-5 {
+  width: 50px;
+  height: 25px;
+  margin-bottom: 15px;
+}
+
+.color-1:hover,
+.color-2:hover,
+.color-3:hover,
+.color-4:hover,
+.color-5:hover {
+  box-shadow: 0 0 8px 4px rgb(190, 190, 190);
+}
+
+.color-1 {
+  background-color: SpringGreen;
+}
+
+.color-2 {
+  background-color: Teal;
+}
+
+.color-3 {
+  background-color: DarkTurquoise;
+}
+
+.color-4 {
+  background-color: RoyalBlue;
+}
+
+.color-5 {
+  background-color: Salmon;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.btn__menu-start,
+.btn__menu-pause {
+  font-family: Comic Sans MS;
+  padding: 15px;
+  text-align: center;
+  background-color: rgb(127, 255, 161);
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  margin-top: 25px;
+}
+
+.btn__menu-start:hover,
+.btn__menu-pause:hover {
+  background-color: aquamarine;
+  cursor: pointer;
+}
+
+.btn__menu-start:active,
+.btn__menu-pause:active {
+  background-color: rgb(120, 235, 194);
+}
+
+.refresh__btn {
+  font-family: Comic Sans MS;
+  padding: 15px;
+  text-align: center;
+  background-color: rgb(127, 255, 161);
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  margin-top: 25px;
+  position: relative;
+}
+
+.refresh__btn:hover {
+  background-color: aquamarine;
+  cursor: pointer;
+}
+
+.refresh__btn:active {
+  background-color: rgb(120, 235, 194);
+}
+
+.help {
+  position: absolute;
+  left: 850px;
+  width: 450px;
+  font-family: Comic Sans MS;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.help__header {
+  color: rgb(41, 41, 41);
+}
+
+.help:hover .help__list {
+  opacity: 0.65;
+}
+
+.help__list {
+  opacity: 0;
+}
+
+@media(max-width:768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .cnvs {
+    order: -1;
+  }
+
+  .help {
+    position: inherit;
+  }
+
+  .menu {
+    position: absolute;
+    top: 420px;
+    right: 220px;
+  }
+
+  .colors {
+    margin-top: 0;
+  }
+}
