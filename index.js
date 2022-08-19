@@ -3,6 +3,7 @@ let cnvs = document.querySelector(".cnvs");
 let ctx = cnvs.getContext("2d");
 let width = cnvs.width
 let height = cnvs.height
+const body = document.querySelector('.body')
 
 //////game field
 let blockSize = 10;
@@ -142,11 +143,14 @@ let refreshers = {
 
 cnvs.addEventListener('touchstart', handleTouchStart, false)
 cnvs.addEventListener('touchmove', handleTouchMove, false)
+cnvs.addEventListener('touchend', handleTouchEnd, false)
 
 let x1 = null
 let y1 = null
 
 function handleTouchStart(event) {
+  body.style.overflow = 'hidden'
+
   const touchStart = event.touches[0];
 
   x1 = touchStart.clientX;
@@ -154,6 +158,8 @@ function handleTouchStart(event) {
 }
 
 function handleTouchMove(event) {
+  body.style.overflow = 'hidden'
+
   if (!x1 || !y1) {
     return false
   }
@@ -183,6 +189,10 @@ function handleTouchMove(event) {
   if (newDirection !== undefined) {
     snake.setDirection(newDirection);
   }
+}
+
+function handleTouchEnd() {
+  body.style.overflow = 'auto'
 }
 
 Snake.prototype.setDirection = function (newDirection) {
