@@ -150,6 +150,7 @@ let y1 = null
 
 function handleTouchStart(event) {
   body.style.overflow = 'hidden'
+  event.preventDefault()
 
   const touchStart = event.touches[0];
 
@@ -159,6 +160,7 @@ function handleTouchStart(event) {
 
 function handleTouchMove(event) {
   body.style.overflow = 'hidden'
+  event.preventDefault()
 
   if (!x1 || !y1) {
     return false
