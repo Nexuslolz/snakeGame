@@ -1,9 +1,27 @@
-# Snake game
+# Snake-game
 
-- my first game in JS
-- it has buttons to control gaming process, panel for changing color of snake, help list
-- you can use it on desktop and mobile/tablet devices
+### Ссылка на прототип:
+https://nexuslolz.github.io/snakeGame/
 
-### Link to the game
+## Preview
 
-- https://nexuslolz.github.io/snakeGame/
+<img src='img/Snake.gif'>
+
+## Описание
+
+Реализация популярной игры "Змейка".
+
+В проекте реализовано:
+- Главная страница с игрой
+- Панель смены цвета Змейки
+- Контроллеры (Старт, Пауза, Новая игра)
+- Страница со Справкой
+- Конец игры наступает при столкновении с бортиком либо с самой собой
+- Чем больше счет, тем быстрее Змейка начинает передвигаться
+
+## Особенности проекта
+
+- Змейке можно изменить цвет
+- Для отрисовки использован Canvas
+- Во время реализации был местами использован JQuery
+- Игра адаптирована под мобильные устройства
