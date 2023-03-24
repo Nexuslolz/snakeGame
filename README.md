@@ -5,7 +5,7 @@ https://nexuslolz.github.io/snakeGame/
 
 ## Preview
 
-<img src='img/Snake.gif' width='550'>
+<img src='img/Snake.gif' width='350'>
 
 ## Описание
 
